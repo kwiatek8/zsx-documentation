@@ -14,7 +14,7 @@ export default defineConfig({
 			social: {
 				github: 'https://github.com/it-zeusx',
 				discord: 'https://discord.gg/kEWG9fVVgh',
-				youtube: 'https://www.youtube.com/channel/UC9Q6Z4j0Z1v1bJ9z7J1Z8jw',
+				youtube: 'https://www.youtube.com/@ZSXDevelopment',
 			},
 			lastUpdated: false,
 			pagination: false,
