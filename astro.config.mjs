@@ -11,6 +11,7 @@ export default defineConfig({
 				replacesTitle: true,
 
 			},
+			favicon: './src/assets/favicon.ico',
 			social: {
 				github: 'https://github.com/it-zeusx',
 				discord: 'https://discord.gg/kEWG9fVVgh',
