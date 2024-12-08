@@ -7,7 +7,7 @@ export default defineConfig({
 		starlight({
 			title: 'ZSX Documentation',
 			logo: {
-				src: './src/assets/zsx.webp',
+				src: './src/assets/logo.avif',
 				replacesTitle: true,
 			},
 			social: {
