@@ -9,9 +9,21 @@ export default defineConfig({
 			logo: {
 				src: './src/assets/zsx.webp',
 				replacesTitle: true,
-			  },
+			},
 			social: {
 				github: 'https://github.com/it-zeusx',
+			},
+
+			defaultLocale: 'en',
+			locales: {
+				// English docs in `src/content/docs/en/`
+				en: {
+					label: 'English',
+				},
+				// Simplified Chinese docs in `src/content/docs/zh-cn/`
+				de: {
+					label: 'Deutsch',
+				},
 			},
 			sidebar: [
 				// {
