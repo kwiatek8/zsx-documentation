@@ -6,6 +6,10 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'My Docs',
+			logo: {
+				src: './src/assets/zsx.webp',
+				replacesTitle: true,
+			  },
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},
