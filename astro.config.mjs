@@ -13,19 +13,19 @@ export default defineConfig({
 			},
 			social: {
 				github: 'https://github.com/it-zeusx',
-				discord: 'https://discord.gg/kEWG9fVVgh'
+				discord: 'https://discord.gg/kEWG9fVVgh',
+				youtube: 'https://www.youtube.com/channel/UC9Q6Z4j0Z1v1bJ9z7J1Z8jw',
 			},
-			lastUpdated: true,
-			pagination: true,
+			lastUpdated: false,
+			pagination: false,
 			titleDelimiter: "|",
 			credits: true,
 			customCss: [
-				// Path to your custom CSS file
 				'./src/styles/custom.css',
 			  ],
 			components: {
 				ThemeSelect: './src/components/EmptyThemeSelect.astro',
-			  },
+		},
 
 			defaultLocale: 'root', // Set the default locale to 'root'
 			locales: {
@@ -43,7 +43,7 @@ export default defineConfig({
 			
 			sidebar: [
 
-				{label: 'Home', link: '/'},
+				{label: 'Home', link: '/home'},
 
 				{
 					label: 'ZSX Multicharacter',
