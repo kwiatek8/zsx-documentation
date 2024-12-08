@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'ZSX Documentation',
 			logo: {
 				src: './src/assets/zsx.webp',
 				replacesTitle: true,
@@ -15,6 +15,7 @@ export default defineConfig({
 			},
 
 			defaultLocale: 'en',
+
 			locales: {
 				// English docs in `src/content/docs/en/`
 				en: {
