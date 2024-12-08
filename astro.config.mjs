@@ -7,49 +7,64 @@ export default defineConfig({
 		starlight({
 			title: 'ZSX Documentation',
 			logo: {
-				src: './src/assets/logo.avif',
+				src: './src/assets/logo.png',
 				replacesTitle: true,
+
 			},
 			social: {
 				github: 'https://github.com/it-zeusx',
+				discord: 'https://discord.gg/kEWG9fVVgh'
 			},
+			lastUpdated: true,
+			pagination: true,
+			titleDelimiter: "|",
+			credits: true,
+			customCss: [
+				// Path to your custom CSS file
+				'./src/styles/custom.css',
+			  ],
+			components: {
+				ThemeSelect: './src/components/EmptyThemeSelect.astro',
+			  },
 
-			defaultLocale: 'en',
-
+			defaultLocale: 'root', // Set the default locale to 'root'
 			locales: {
-				// English docs in `src/content/docs/en/`
-				en: {
+				root: {
 					label: 'English',
+					lang: 'en',
 				},
-				// Simplified Chinese docs in `src/content/docs/zh-cn/`
 				de: {
 					label: 'Deutsch',
 				},
+				pl: {
+					label: 'Polski',
+				},
 			},
+			
 			sidebar: [
-				// {
-				// 	label: 'Guides',
-				// 	items: [
-				// 		// Each item here is one entry in the navigation menu.
-				// 		{ label: 'Example Guide', slug: 'guides/example' },
-				// 	],
-				// },
+
+				{label: 'Home', link: '/'},
+
 				{
 					label: 'ZSX Multicharacter',
 					autogenerate: { directory: 'multicharacter' },
+					collapsed: true,
 				},
 
 				{
 					label: 'User Interface (UI) V1',
 					autogenerate: { directory: 'ui-v1' },
+					collapsed: true,
 				},
 				{
 					label: 'User Interface (UI) V2',
 					autogenerate: { directory: 'ui-v2' },
+					collapsed: true,
 				},
 				{
 					label: 'Dealership',
 					autogenerate: { directory: 'dealership' },
+					collapsed: true,
 				},
 			],
 		}),
