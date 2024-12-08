@@ -11,19 +11,32 @@ export default defineConfig({
 				replacesTitle: true,
 			  },
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/it-zeusx',
 			},
 			sidebar: [
+				// {
+				// 	label: 'Guides',
+				// 	items: [
+				// 		// Each item here is one entry in the navigation menu.
+				// 		{ label: 'Example Guide', slug: 'guides/example' },
+				// 	],
+				// },
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'ZSX Multicharacter',
+					autogenerate: { directory: 'multicharacter' },
+				},
+
+				{
+					label: 'User Interface (UI) V1'
+					autogenerate: { directory: 'ui-v1' },
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'User Interface (UI) V2'
+					autogenerate: { directory: 'ui-v2' },
+				},
+				{
+					label: 'Dealership'
+					autogenerate: { directory: 'dealership' },
 				},
 			],
 		}),
