@@ -40,15 +40,15 @@ export default defineConfig({
 				},
 
 				{
-					label: 'User Interface (UI) V1'
+					label: 'User Interface (UI) V1',
 					autogenerate: { directory: 'ui-v1' },
 				},
 				{
-					label: 'User Interface (UI) V2'
+					label: 'User Interface (UI) V2',
 					autogenerate: { directory: 'ui-v2' },
 				},
 				{
-					label: 'Dealership'
+					label: 'Dealership',
 					autogenerate: { directory: 'dealership' },
 				},
 			],
