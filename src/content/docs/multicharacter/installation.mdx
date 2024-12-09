@@ -28,15 +28,15 @@ import { Code, Steps, Tabs, TabItem} from '@astrojs/starlight/components'
          Download the Multicharacter resource from the [Keymaster site](https://keymaster.fivem.net/).
 
       3. **Add the Resource to Your Server**  
-         - Drag the downloaded resource into your main `/resources` directory.
+         Drag the downloaded resource into your main `/resources` directory.
 
       4. **Update Your Configuration File**  
          Open your `server.cfg` (or use txAdmin > CFG Editor) and do the following:  
-         - Add the following lines to stop any existing multicharacter resources if you did not remove them already:  
+         Add the following lines to stop any existing multicharacter resources if you did not remove them already:  
            ```plaintext
            stop esx_multicharacter  # Default ESX multicharacter
            ```
-         - Add the following line to ensure the new Multicharacter resource starts:  
+         Add the following line to ensure the new Multicharacter resource starts:  
            ```plaintext
            ensure ZSX_Multicharacter
            ```
