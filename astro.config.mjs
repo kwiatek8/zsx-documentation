@@ -13,7 +13,7 @@ export default defineConfig({
 
 			},
 			editLink: {
-				baseUrl: 'https://github.com/Ludaro1024/zsx-documentation/tree/main/src/content/docs',
+				baseUrl: 'https://github.com/Ludaro1024/zsx-documentation/edit/main/src/docs',
 			},
 			favicon: './src/assets/favicon.ico',
 			social: {
