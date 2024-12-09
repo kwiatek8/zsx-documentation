@@ -4,7 +4,8 @@ sidebar: {
     order: 2
 }
 ---
-# ESX
+
+import { Code, Tabs, TabItem } from '@astrojs/starlight/components';
 
 # Your es_extended Config.Multichar isnt enabled
 
@@ -27,7 +28,7 @@ Error corresponds to non-existent player job. Make sure to check if your job exi
 
 ## Failed to get player position.
 
-If for some reason es_extended couldn't set the position it will pop out in database as null for specific player. Head over to your database, find table users and replace for the specified identifier position column to for example: 
+If for some reason your Framework couldn't set the position it will pop out in database as null for specific player. Head over to your database, find table users and replace for the specified identifier position column to for example: 
 
 ```json
 {"y":-2736.949462890625,"x":-1036.2989501953126,"heading":291.968505859375,"z":20.1640625}
@@ -36,4 +37,51 @@ If for some reason es_extended couldn't set the position it will pop out in data
 ![Positionerror Image](../../../assets/multicharacter/positionerror.png)
 # Database
 
-# other
+## Invalid VARCHAR length for table zsx_multicharacter_slots
+
+To fix this issue you just need to change the length of the identifier column in the `zsx_multicharacter_slots` table to 255. You can do this by running the following SQL query:
+```sql
+ALTER TABLE `zsx_multicharacter_slots` MODIFY identifier VARCHAR(255);
+```
+
+## Invalid identifier type for config value Config.Characters.IdentifierType
+
+If you are getting this error, it means that you have set an invalid identifier type in your `Config.Characters.IdentifierType` in your `config.lua` file. The valid identifier types are `steam`, `license`, `license2` and `discord`. To fix this, you need to go to your `config.lua` file and set `Config.Characters.IdentifierType` to one of the valid identifier types.
+
+Make sure to check what identifier type your framework is using.
+
+
+<Tabs>
+  <TabItem label="ESX">
+  <Code code='-- DUMP OF es_extended/server/functions.lua
+function ESX.GetIdentifier(playerId)
+    local fxDk = GetConvarInt("sv_fxdkMode", 0)
+    if fxDk == 1 then
+        return "ESX-DEBUG-LICENCE"
+    end
+
+    local identifier = GetPlayerIdentifierByType(playerId, "license") -- here is the identifier type you use
+    return identifier and identifier:gsub("license:", "")
+end' label = "es_extended/server/functions.lua" mark ="license" lang="lua" >
+
+</Code>
+</TabItem>
+  <TabItem label="QB">
+    <Code code="-- DUMP OF qb-core/server/functions.lua
+function QBCore.Functions.SetPlayerBucket(source, bucket)
+    if source and bucket then
+        local plicense = QBCore.Functions.GetIdentifier(source, 'license') -- here is the identifier type you use
+        Player(source).state:set('instance', bucket, true)
+        SetPlayerRoutingBucket(source, bucket)
+        QBCore.Player_Buckets[plicense] = { id = source, bucket = bucket }
+        return true
+    else
+        return false
+    end
+end" label = "qb-core/server/functions.lua" mark ="'license'" lang="lua" >
+
+</Code>
+
+</TabItem>
+</Tabs>
+
