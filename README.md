@@ -1,55 +1,32 @@
-# Starlight Starter Kit: Basics
+# Welcome to the ZSX Development Documentation GitHub!  
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+This repository hosts the official documentation for the **ZSX Development FiveM Services**. Our goal is to provide clear, organized resources for developers using our tools and scripts.  
 
-```
-npm create astro@latest -- --template starlight
-```
+The documentation is built using [Starlight](https://starlight.astro.build) and hosted on [Vercel](https://vercel.com) – completely free for the community!  
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+If you're looking for help or have questions, feel free to join our [Discord server](https://discord.gg/kEWG9fVVgh).  
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 🛠️ Contributing  
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+We welcome contributions to improve the documentation. Here's how you can submit changes:  
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   │   └── config.ts
-│   └── env.d.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+### Step 1: Fork the Repository  
+Click the **Fork** button in the top-right corner of this GitHub repository. This creates a copy of the project in your account.  
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## Step 2: Edit the Documentation
+Navigate to the `src/content/docs` directory to find the documentation files. You can edit the existing files or create new ones.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+### Step 3: Submit Changes
+Then, go to this repository and click **Compare & Pull Request** to submit your changes. and then we will review your changes and upload them to the website :)
+---
 
-Static assets, like favicons, can be placed in the `public/` directory.
+## 🛡️ Thank You!  
 
-## 🧞 Commands
+Thanks for contributing to the ZSX Development documentation! Every improvement helps us support the community better.  
 
-All commands are run from the root of the project, from a terminal:
+If you have any questions, feel free to reach out on our [Discord server](https://discord.gg/kEWG9fVVgh).  
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+Happy developing! 😊  
+**ZSX Development Team**

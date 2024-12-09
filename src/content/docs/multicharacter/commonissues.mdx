@@ -1,3 +1,39 @@
 ---
 title: Common Issues
+sidebar: {
+    order: 2
+}
 ---
+# ESX
+
+# Your es_extended Config.Multichar isnt enabled
+
+If you are getting this error, it means that you have not enabled the `Config.Multichar` in your `es_extended` config file. To fix this, you need to go to your `es_extended` config file and set `Config.Multichar` to `true`.
+
+```lua
+Config.Multichar = true
+```
+If you joined before enabling `Config.Multichar`, the value would have been set to `false`, causing ESX to automatically create an empty user entry with an identifier that doesn't follow the expected template (`char<id>:<identifier>`). To fix this, you can either remove the improperly formatted character or prepend `char1:` to the identifier.
+![Databse Image](../../../assets/multicharacter/databaseerror.png)
+
+
+## Failed to get the job from object.
+
+Error corresponds to non-existent player job. Make sure to check if your job exists in job and job_grades table in database.
+
+## Failed to get the job grade from object.
+
+Error corresponds to non-existent player job. Make sure to check if your job exists in job and job_grades table in database.
+
+## Failed to get player position.
+
+If for some reason es_extended couldn't set the position it will pop out in database as null for specific player. Head over to your database, find table users and replace for the specified identifier position column to for example: 
+
+```json
+{"y":-2736.949462890625,"x":-1036.2989501953126,"heading":291.968505859375,"z":20.1640625}
+```
+
+![Positionerror Image](../../../assets/multicharacter/positionerror.png)
+# Database
+
+# other
