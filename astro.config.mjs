@@ -24,13 +24,13 @@ export default defineConfig({
 			lastUpdated: false,
 			pagination: false,
 			titleDelimiter: "|",
-			credits: true,
+			credits: false,
 			customCss: [
 				'./src/styles/custom.css',
-			  ],
+			],
 			components: {
 				ThemeSelect: './src/components/EmptyThemeSelect.astro',
-		},
+			},
 
 			defaultLocale: 'root', // Set the default locale to 'root'
 			locales: {
@@ -45,10 +45,10 @@ export default defineConfig({
 					label: 'Polski',
 				},
 			},
-			
+
 			sidebar: [
 
-				{label: 'Home', link: '/home'},
+				{ label: 'Home', link: '/home' },
 
 				{
 					label: 'ZSX Multicharacter',
@@ -71,6 +71,7 @@ export default defineConfig({
 					autogenerate: { directory: 'dealership' },
 					collapsed: true,
 				},
+				{label:"Contributing", link:"/contributing"},
 			],
 		}),
 	],
