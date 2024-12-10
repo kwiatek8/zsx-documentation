@@ -1,0 +1,25 @@
+---
+title: About
+sidebar: {
+    order: 1
+}
+---
+
+import { Card, CardGrid, LinkCard,} from '@astrojs/starlight/components';
+import YouTubeGrid from '../../../components/youtube-grid.astro';
+
+
+ <YouTubeGrid
+	videos={[
+		{
+			href: 'https://youtu.be/wMEugRh8oE0',
+		},
+	]}
+/>
+
+<CardGrid>
+  <LinkCard title="Tebex Store" icon="open-book" href="https://zsx-development.tebex.io/package/5898141">
+  </LinkCard>
+  <LinkCard title="CFX forum post" icon="information" href="https://forum.cfx.re/t/zsx-dealership-fivem-vehicle-shop-with-cinematic-camera-system/5167167">
+  </LinkCard>
+</CardGrid>
