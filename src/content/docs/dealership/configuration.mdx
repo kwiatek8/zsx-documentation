@@ -5,7 +5,7 @@ sidebar: {
 }
 ---
 import { FileTree, Steps, Code } from '@astrojs/starlight/components';
-
+export const highlights = [' --removeCoinsFunc(vehData.price)', ' --Apply the code check if user have exclusive currency required for vehicle price. Example ']
 
 ### Adding A store 
 
@@ -89,7 +89,7 @@ To use the exclusive payment system you need to enable it inside of
 <Code code="Exclusive.Retrieval = {
     use = true, -- SET USE TO TRUE 
     type = 'COINS', 
-}" lang="lua" ins="true"></Code>
+}" lang="lua" ins="true" title="shared/config_exclusive.lua"></Code>
 
 Now we configure the function that will be used to retrieve the currency from the player Head to:
 
@@ -99,3 +99,32 @@ Now we configure the function that will be used to retrieve the currency from th
             - functions
                 - **sv_editable.lua**
 </FileTree>
+
+<Code code="Editable.ExclusivePayCheck = function(src, vehData)
+    --Apply the code check if user have exclusive currency required for vehicle price. Example 
+    local coins = 2000
+    if coins >= vehData.price then
+        return true
+    end
+    return false
+
+    -- For help contact on discord discord.gg/MF9uVuWrQn
+end
+
+
+Editable.ExclusivePayForVehicle = function(src, vehData)
+    local coins = 2000
+    local receivedPay = false
+    if coins >= vehData.price then
+        --removeCoinsFunc(vehData.price)
+        receivedPay = true
+    else
+        receivedPay = false
+    end
+    return receivedPay
+    -- For help contact on discord discord.gg/MF9uVuWrQn
+end" lang="lua" mark={highlights} title="server/functions/sv_editable.lua"> </Code>
+
+You have to add the function that will remove the currency from the player and check if the player has enough currency to buy the vehicle.
+
+After this you can configure which vehicle is Exclusive to be bought with the currency you do this by editing the vehicle in the database by editing the row isExclusive to 1
