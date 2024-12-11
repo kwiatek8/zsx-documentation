@@ -1,111 +1,112 @@
 ---
-title: Instalacja
-description: Jak prawidłowo zainstalować zasób Multicharacter
+title: Installation
+description: How to Properly Install the Multicharacter Resource
 sidebar: {
     order: 2
 }
 ---
 
-## Jak prawidłowo zainstalować zasób Multicharacter
+## How to Properly Install the Multicharacter Resource
 
-Aby upewnić się, że zasób został poprawnie zainstalowany i działa, postępuj zgodnie z poniższymi krokami:
+To ensure the resource is correctly installed and functioning, follow these steps:
 
-import { Code, Steps, Tabs, TabItem } from '../../@astrojs/starlight/components'
+import { Code, Steps, Tabs, TabItem} from '@astrojs/starlight/components'
 
 <Tabs>
   <TabItem label="ESX">
     <Steps>
-      1. **Skonfiguruj ESX**  
-         Jeśli korzystasz z ESX, upewnij się, że poniższe ustawienie jest włączone w pliku `es_extended/config.lua` lub `es_extended/shared/main.lua`:  
+      1. **Configure ESX**  
+         If you're using ESX, make sure the following setting is enabled in the `es_extended/config.lua` or `es_extended/shared/main.lua` file:  
          <Code code='
          Config.Multichar = true (GetResourceState("esx_multicharacter") ~= "missing")
          'lang="lua" label="es_extended/config.lua" del='GetResourceState("esx_multicharacter") ~= "missing"'> 
          </Code>
 
-         Usuń czerwoną część i zamień ją na true.
+         Delete the red part and replace it with true
 
-      2. **Pobierz zasób**  
-         Pobierz zasób Multicharacter z [Keymaster site](https://keymaster.fivem.net/).
+      2. **Download the Resource**  
+         Download the Multicharacter resource from the [Keymaster site](https://keymaster.fivem.net/).
 
-      3. **Dodaj zasób do serwera**  
-         Przenieś pobrany zasób do głównego katalogu `/resources`.
-
-      4. **Zaktualizuj plik konfiguracyjny**  
-         Otwórz plik `server.cfg` (lub użyj txAdmin > CFG Editor) i wykonaj następujące kroki:  
-         Dodaj poniższe linie, aby zatrzymać istniejące zasoby multicharacter, jeśli ich jeszcze nie usunąłeś:  
+      3. **Add the Resource to Your Server**  
+         Drag the downloaded resource into your main `/resources` directory.
+fg
+      4. **Update Your Configuration File**  
+         Open your `server.cfg` (or use txAdmin > CFG Editor) and do the following:  
+         Add the following lines to stop any existing multicharacter resources if you did not remove them already:  
            ```plaintext
-           stop esx_multicharacter  # Domyślny ESX multicharacter
+           stop esx_multicharacter  # Default ESX multicharacter
            ```
-         Dodaj poniższą linię, aby upewnić się, że nowy zasób Multicharacter uruchamia się:  
+         Add the following line to ensure the new Multicharacter resource starts:  
            ```plaintext
            ensure ZSX_Multicharacter
            ```
-           Ta linia powinna być umieszczona zaraz po `ensure` twojego frameworka.
+           this should be placed somewhere after your framework's `ensure` line.
 
-      5. **Ustaw liczbę postaci**  
-         Skonfiguruj maksymalną liczbę postaci w pliku `/shared/config.lua`:  
+      5. **Set the Number of Characters**  
+         Configure the maximum number of characters in the `/shared/config.lua` file:  
          ```lua
-         Config.Characters.Free = 1  -- Zamień "1" na pożądaną liczbę darmowych postaci
+         Config.Characters.Free = 1  -- Replace "1" with your desired number of free characters
          ```
 
-      6. **Uruchom serwer**  
-         Uruchom serwer i ciesz się zasobem!
+      6. **Start Your Server**  
+         Launch your server and enjoy the resource!
     </Steps>
   </TabItem>
 
   <TabItem label="QBCore">
     <Steps>
-      1. **Pobierz zasób**  
-         Pobierz zasób Multicharacter z [Keymaster site](https://keymaster.fivem.net/).
+      1. **Download the Resource**  
+         Download the Multicharacter resource from the [Keymaster site](https://keymaster.fivem.net/).
 
-      2. **Dodaj zasób do serwera**  
-         - Przenieś pobrany zasób do głównego katalogu `/resources`. 
+      2. **Add the Resource to Your Server**  
+         - Drag the downloaded resource into your main `/resources` directory. 
 
-      4. **Zaktualizuj plik konfiguracyjny**  
-         Otwórz plik `server.cfg` (lub użyj txAdmin > CFG Editor) i wykonaj następujące kroki:  
-         - Dodaj poniższe linie, aby zatrzymać istniejące zasoby multicharacter, jeśli ich jeszcze nie usunąłeś:  
+      4. **Update Your Configuration File**  
+         Open your `server.cfg` (or use txAdmin > CFG Editor) and do the following:  
+         - Add the following lines to stop any existing multicharacter resources if you did not remove them already:  
            ```plaintext
-           stop qb_multicharacter  # Domyślny QBCore multicharacter
+           stop qb_multicharacter  # Default QBCore multicharacter
            ```
-         - Dodaj poniższą linię, aby upewnić się, że nowy zasób Multicharacter uruchamia się:  
+         - Add the following line to ensure the new Multicharacter resource starts:  
            ```plaintext
            ensure ZSX_Multicharacter
            ```
-         Umieść tę linię bezpośrednio po `ensure` twojego frameworka.
+         Place this line immediately after your framework's `ensure` line.
 
-      3. **Ustaw liczbę postaci**  
-         Skonfiguruj maksymalną liczbę postaci w pliku `/shared/config.lua`:  
+      3. **Set the Number of Characters**  
+         Configure the maximum number of characters in the `/shared/config.lua` file:  
          ```lua
-         Config.Characters.Free = 1  -- Zamień "1" na pożądaną liczbę darmowych postaci
+         Config.Characters.Free = 1  -- Replace "1" with your desired number of free characters
          ```
 
-      4. **Uruchom serwer**  
-         Uruchom serwer i ciesz się zasobem!
+      4. **Start Your Server**  
+         Launch your server and enjoy the resource!
     </Steps>
   </TabItem>
 
   <TabItem label="QBox">
       <Steps>
-      1. **Pobierz zasób**  
-         Pobierz zasób Multicharacter z [Keymaster site](https://keymaster.fivem.net/).
+      1. **Download the Resource**  
+         Download the Multicharacter resource from the [Keymaster site](https://keymaster.fivem.net/).
 
-      2. **Dodaj zasób do serwera**  
-         - Przenieś pobrany zasób do głównego katalogu `/resources`. 
+      2. **Add the Resource to Your Server**  
+         - Drag the downloaded resource into your main `/resources` directory. 
 
-         - Dodaj poniższą linię, aby upewnić się, że nowy zasób Multicharacter uruchamia się:  
+         - Add the following line to ensure the new Multicharacter resource starts:  
            ```plaintext
            ensure ZSX_Multicharacter
            ```
-         Umieść tę linię bezpośrednio po `ensure` twojego frameworka.
+         Place this line immediately after your framework's `ensure` line.
 
-      3. **Ustaw liczbę postaci**  
-         Skonfiguruj maksymalną liczbę postaci w pliku `/shared/config.lua`:  
+      3. **Set the Number of Characters**  
+         Configure the maximum number of characters in the `/shared/config.lua` file:  
          ```lua
-         Config.Characters.Free = 1  -- Zamień "1" na pożądaną liczbę darmowych postaci
+         Config.Characters.Free = 1  -- Replace "1" with your desired number of free characters
          ```
 
-      4. **Uruchom serwer**  
-         Uruchom serwer i ciesz się zasobem!
+      4. **Start Your Server**  
+         Launch your server and enjoy the resource!
     </Steps>
   </TabItem>
 </Tabs>
+
