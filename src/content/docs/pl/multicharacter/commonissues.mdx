@@ -54,7 +54,7 @@ Upewnij się, jaki typ identyfikatora używa Twój framework.
 
 <Tabs>
   <TabItem label="ESX">
-    <Code code='-- DUMP Z pliku es_extended/server/functions.lua
+    <Code wrap code='-- DUMP Z pliku es_extended/server/functions.lua
 function ESX.GetIdentifier(playerId)
     local fxDk = GetConvarInt("sv_fxdkMode", 0)
     if fxDk == 1 then
@@ -68,7 +68,7 @@ end' label = "es_extended/server/functions.lua" mark ="license" lang="lua" >
 </Code>
   </TabItem>
   <TabItem label="QB">
-    <Code code="-- DUMP Z pliku qb-core/server/functions.lua
+    <Code wrap code="-- DUMP Z pliku qb-core/server/functions.lua
 function QBCore.Functions.SetPlayerBucket(source, bucket)
     if source and bucket then
         local plicense = QBCore.Functions.GetIdentifier(source, 'license') -- tutaj używasz typu identyfikatora

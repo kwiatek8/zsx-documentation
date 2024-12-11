@@ -53,7 +53,7 @@ Make sure to check what identifier type your framework is using.
 
 <Tabs>
   <TabItem label="ESX">
-  <Code code='-- DUMP OF es_extended/server/functions.lua
+  <Code wrap code='-- DUMP OF es_extended/server/functions.lua
 function ESX.GetIdentifier(playerId)
     local fxDk = GetConvarInt("sv_fxdkMode", 0)
     if fxDk == 1 then
@@ -67,7 +67,7 @@ end' label = "es_extended/server/functions.lua" mark ="license" lang="lua" >
 </Code>
 </TabItem>
   <TabItem label="QB">
-    <Code code="-- DUMP OF qb-core/server/functions.lua
+    <Code wrap code="-- DUMP OF qb-core/server/functions.lua
 function QBCore.Functions.SetPlayerBucket(source, bucket)
     if source and bucket then
         local plicense = QBCore.Functions.GetIdentifier(source, 'license') -- here is the identifier type you use

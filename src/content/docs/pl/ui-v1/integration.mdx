@@ -42,7 +42,7 @@ Dla większej wygody można zastąpić te eksporty systemem powiadomień używan
 <Tabs>
 <TabItem label="ESX"> 
 Aby to zrobić, wyszukaj `ESX.ShowNotification` w pliku `es_extended/client/functions.lua` i zamień go na poniższy kod:
-<Code lang="lua" code='function ESX.ShowNotification(message, notifyType, length)
+<Code wrap lang="lua" code='function ESX.ShowNotification(message, notifyType, length)
     if exports.ZSX_UI then
         exports["ZSX_UI"]:AddNotify("fas fa-inbox", "Powiadomienie!", message, length)
     else
@@ -53,7 +53,7 @@ Aby to zrobić, wyszukaj `ESX.ShowNotification` w pliku `es_extended/client/func
 end'></Code>
 </TabItem>
 <TabItem label="QBCore">
-<Code lang="lua" code='function QBCore.Functions.Notify(text, textype, length)
+<Code wrap lang="lua" code='function QBCore.Functions.Notify(text, textype, length)
     if type(text) == "table" then
         local ttext = text.text or "Placeholder"
         local caption = text.caption or "Placeholder"

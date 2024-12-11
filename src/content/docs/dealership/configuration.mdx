@@ -86,7 +86,7 @@ To use the exclusive payment system you need to enable it inside of
 
 </FileTree>
 
-<Code code="Exclusive.Retrieval = {
+<Code wrap code="Exclusive.Retrieval = {
     use = true, -- SET USE TO TRUE 
     type = 'COINS', 
 }" lang="lua" ins="true" title="shared/config_exclusive.lua"></Code>
@@ -100,7 +100,7 @@ Now we configure the function that will be used to retrieve the currency from th
                 - **sv_editable.lua**
 </FileTree>
 
-<Code code="Editable.ExclusivePayCheck = function(src, vehData)
+<Code wrap code="Editable.ExclusivePayCheck = function(src, vehData)
     --Apply the code check if user have exclusive currency required for vehicle price. Example 
     local coins = 2000
     if coins >= vehData.price then

@@ -83,7 +83,7 @@ Aby używać systemu ekskluzywnej płatności, musisz go włączyć w pliku:
 
 </FileTree>
 
-<Code code="Exclusive.Retrieval = {
+<Code wrap code="Exclusive.Retrieval = {
     use = true, -- USTAW 'USE' NA TRUE
     type = 'COINS', 
 }" lang="lua" ins="true" title="shared/config_exclusive.lua"></Code>
@@ -97,7 +97,7 @@ Teraz konfigurujemy funkcję, która będzie używana do pobierania waluty od gr
                 - **sv_editable.lua**
 </FileTree>
 
-<Code code="Editable.ExclusivePayCheck = function(src, vehData)
+<Code wrap code="Editable.ExclusivePayCheck = function(src, vehData)
     -- Zastosuj kod sprawdzający, czy użytkownik ma wymaganą ekskluzywną walutę na cenę pojazdu. Przykład
     local coins = 2000
     if coins >= vehData.price then

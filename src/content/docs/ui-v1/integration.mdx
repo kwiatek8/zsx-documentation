@@ -41,7 +41,7 @@ Alternatively, for greater convenience, you can replace these exports with the n
 <Tabs>
 <TabItem label="ESX"> 
 You do this by searching ESX.ShowNotification inside your es_extended/client/functions.lua file and replace it with the following code:
-<Code lang="lua" code='function ESX.ShowNotification(message, notifyType, length)
+<Code wrap lang="lua" code='function ESX.ShowNotification(message, notifyType, length)
     if exports.ZSX_UI then
     exports["tc_customui"]:AddNotify("fas fa-inbox", "Notification!", message, length)
     else
@@ -53,7 +53,7 @@ You do this by searching ESX.ShowNotification inside your es_extended/client/fun
 </TabItem>
 <TabItem label="QBCore">
 
-<Code lang="lua"code= 'function QBCore.Functions.Notify(text, textype, length)
+<Code wrap lang="lua"code= 'function QBCore.Functions.Notify(text, textype, length)
     if type(text) == "table" then
         local ttext = text.text or "Placeholder"
         local caption = text.caption or "Placeholde"

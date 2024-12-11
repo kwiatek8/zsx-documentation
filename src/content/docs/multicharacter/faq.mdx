@@ -13,7 +13,7 @@ import { Code } from '@astrojs/starlight/components';
 If you would like to translate the ZSX_Multicharacter resource into another language, you can follow these steps:
 
 Firstly you can visit /shared/translations.lua which translates code inside lua that is parsed to NUI:
-<Code code= "Translations.InfoText = {
+<Code wrap code= "Translations.InfoText = {
     ['preparing_z_coords'] = 'Preparing safe coords',
     ['preparing_heading'] = 'Preparing heading',
     ['preparing_new_coords'] = 'Preparing new coords',
@@ -25,7 +25,7 @@ Then you can go to /client/html/js/variables.js and client/html/index.html and e
 ##  How to add a function to automatically hide, show my HUD?
 
 Inside /client/cl_worker.lua you can find the function HandleHud
-<Code code="	
+<Code wrap code="	
 HandleHud = function(hideHud)
     -- CODE TO HIDE/ENABLE YOUR HUD
 end

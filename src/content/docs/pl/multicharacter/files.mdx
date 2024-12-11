@@ -15,7 +15,7 @@ import { Code, Tabs, TabItem } from '@astrojs/starlight/components';
 
 <Tabs>
 <TabItem label = "cl_baseevents.lua">
-<Code code="RegisterNetEvent('ZSX_Multicharacter:Listener:WelcomeScreenStateChanged')
+<Code wrap code="RegisterNetEvent('ZSX_Multicharacter:Listener:WelcomeScreenStateChanged')
 AddEventHandler('ZSX_Multicharacter:Listener:WelcomeScreenStateChanged', function(state)
     if state then
         --Executed when welcome screen changes state to true
@@ -134,7 +134,7 @@ end)
 </TabItem>
 
 <TabItem label = "cl_config.lua">
-<Code code="function canLogout()
+<Code wrap code="function canLogout()
     return true
 end
 
@@ -168,7 +168,7 @@ Client.HandlePreWarmup = function()
 end" lang="lua"></Code>
 </TabItem>
 <TabItem label ="cl_identity.lua">
-<Code code="--[[
+<Code wrap code="--[[
     This file has been created to allow you to connect your custom identity or change some other related identity things.
     Make sure you fulfill the data required to register the player and if you don't want to use Identity.Anim function make sure to add
     TriggerServerEvent('ZSX_Multicharacter:Event:SetPlayerState', 'LOG_IN_USER') to switch his bucket to the main one. Otherwise he won't see anyone there
@@ -205,7 +205,7 @@ ConfigIdentity.Bars = function(state)
 end" lang="lua"> </Code>
 </TabItem>
 <TabItem label = "cl_worker.lua">
-<Code code="WorkerBeforeInitiliazation = function()
+<Code wrap code="WorkerBeforeInitiliazation = function()
     -- CODE THAT IS EXECUTED BEFORE MULTICHARACTER BEGINNS
 end
 
@@ -266,7 +266,7 @@ end
 ]]" lang="lua"> </Code> 
 </TabItem>
 <TabItem label="framework_functions.lua">
-<Code code="Framework = {}
+<Code wrap code="Framework = {}
 Framework.TriggerServerCallback = function(callbackName, cbFunc, ...)
     if ESX and FrameworkSelected == 'ESX' then
         ESX.TriggerServerCallback(callbackName, cbFunc, ...)
@@ -428,7 +428,7 @@ end" lang="lua"> </Code>
 </TabItem>
 <TabItem label="Shared">
 <Tabs>
-<TabItem label="config.lua">  <Code code="Config = {}
+<TabItem label="config.lua">  <Code wrap code="Config = {}
 Config.IssueHelper = false -- [DEF. false] [BOOLEAN] Use that if you need help on discord. Gathers config data and non-sensitive data.
 Config.Characters = {}
 Config.Characters.Free = 1
@@ -521,13 +521,13 @@ Config.CustomInitialization = false         -- [DEF. false] [BOOL] If you will s
     DOCS: https://zsx-development.gitbook.io/docs/multicharacter/faq
 ]]" lang="lua"></Code> </TabItem>
 
-<TabItem label="shared_framework.lua"> <Code code="ESX = GetResourceState('es_extended') == 'started' and exports['es_extended']:getSharedObject() or false
+<TabItem label="shared_framework.lua"> <Code wrap code="ESX = GetResourceState('es_extended') == 'started' and exports['es_extended']:getSharedObject() or false
 QBCore = GetResourceState('qb-core') == 'started' and exports['qb-core']:GetCoreObject() or false
 FrameworkSelected = GetResourceState('es_extended') == 'started' and 'ESX' or GetResourceState('qb-core') == 'started' and 'QBCore'
 ZSX_UI = 'ZSX_UI'
 UserInterfaceActive = GetResourceState(ZSX_UI) == 'started'" lang="lua"> </Code></TabItem>
 <TabItem label ="config_locations.lua"> 
-<Code code="Config.Locations = {
+<Code wrap code="Config.Locations = {
     ['mission_row'] = {
         coords = vector3(409.1667, -1013.328, 29.39579),
         type = 'default',
@@ -536,7 +536,7 @@ UserInterfaceActive = GetResourceState(ZSX_UI) == 'started'" lang="lua"> </Code>
 }" lang="lua"> </Code>
 </TabItem>
 <TabItem label ="config_usersettings.lua"> 
-<Code code="Config.Filters = {
+<Code wrap code="Config.Filters = {
     {
         name = 'none',
         label = 'None'
@@ -666,7 +666,7 @@ Config.Cameras = {
 }" lang="lua"> </Code>
 </TabItem>
 <TabItem label ="translations.lua"> 
-<Code code="Translations = {}
+<Code wrap code="Translations = {}
 Translations.InfoText = {
     ['preparing_z_coords'] = 'Preparing safe coords',
     ['preparing_heading'] = 'Preparing heading',
@@ -687,7 +687,7 @@ Translations.InfoText = {
 <Tabs>
 <TabItem label ="functions/characters.lua"> 
 
-<Code code="Characters = {}
+<Code wrap code="Characters = {}
 Characters.ActiveUsers = {}
 Characters.Jobs = {}
 Characters.JobGrades = {}
@@ -1467,7 +1467,7 @@ end)" lang="lua"> </Code>
 </TabItem>
 
 <TabItem label = "framework/framework_functions.lua"> 
-<Code code="Framework = {}
+<Code wrap code="Framework = {}
 Framework.RegisterServerCallback = function(callbackName, cbFunc)
     if ESX and FrameworkSelected == 'ESX' then
         ESX.RegisterServerCallback(callbackName, cbFunc)
